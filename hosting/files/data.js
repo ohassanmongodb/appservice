@@ -70,5 +70,9 @@ const savePosition = async (position) =>{
 
 
 const search = async() =>{
-    console.log("hello!");
+
+    const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
+    let movies = mongodb.db("sample_mflix").collection("movies");
+    let m = movies.find();
+    printjson(m);
 }
