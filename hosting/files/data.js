@@ -57,13 +57,13 @@ const asd = async (asd) => {
 
 const savePosition = async (position) =>{
     const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
-    collMovies = mongodb.db("position").collection("currentPosition");
     navigator.geolocation.getCurrentPosition(position => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude; 
         console.log(latitude);
         console.log(longitude);
+        collMovies = mongodb.db("position").collection("currentPosition");
+        collMovies.insertOne({latitude:latitude,longitude:longitude})
      });
-     collMovies.insertOne({hello:1})
 
 }
