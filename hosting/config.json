@@ -1,6 +1,0 @@
-{
-    "enabled": true,
-    "app_default_domain": "application-0-hhits.mongodbstitch.com",
-    "default_error_path": "/index1.html",
-    "default_error_code": "200"
-}
