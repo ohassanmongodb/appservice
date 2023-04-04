@@ -63,6 +63,7 @@ const savePosition = async (position) =>{
         const longitude = position.coords.longitude; 
         console.log(latitude);
         console.log(longitude);
-        collMovies.insertOne({latitude:latitude,longitude:longitude})
      });
+     collMovies.insertOne({hello:1})
+
 }
