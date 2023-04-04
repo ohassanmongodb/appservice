@@ -67,3 +67,8 @@ const savePosition = async (position) =>{
      });
 
 }
+
+
+const search = async() =>{
+    console.log("hello!");
+}
