@@ -7,8 +7,8 @@
 
 function position() {
     var APP_ID = 'application-1-bzgbi';
-var ATLAS_SERVICE = 'mongodb-atlas';
-var app = new Realm.App({id: APP_ID});
+    var ATLAS_SERVICE = 'mongodb-atlas';
+    var app = new Realm.App({id: APP_ID});
     const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
     navigator.geolocation.getCurrentPosition(position => {
         const latitude = position.coords.latitude;
