@@ -70,7 +70,9 @@ const savePosition = async (position) =>{
 
 
 const search = async() =>{
-
+    var APP_ID = 'application-1-bzgbi';
+    var ATLAS_SERVICE = 'mongodb-atlas';
+    var app = new Realm.App({id: APP_ID});
     const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
     let movies = mongodb.db("sample_mflix").collection("movies");
     let m = movies.find();
