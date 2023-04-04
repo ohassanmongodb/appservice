@@ -1,4 +1,6 @@
 {
     "enabled": true,
-    "app_default_domain": "application-1-bzgbi.mongodbstitch.com"
+    "app_default_domain": "application-1-bzgbi.mongodbstitch.com",
+    "default_error_path": "",
+    "default_error_code": ""
 }
