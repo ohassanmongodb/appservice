@@ -1,1 +1,6 @@
-[]
+[
+    {
+        "name": "pauseclusters",
+        "private": true
+    }
+]
