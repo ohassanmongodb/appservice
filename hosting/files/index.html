@@ -28,8 +28,9 @@
 
 
 <div class="d-flex align-items-center">
-    <form class="w-100 me-3" role="search">
-      <input type="search" class="form-control" placeholder="Search..." aria-label="Search"  onfocusout=search()>
+    <form class="w-100 me-3" role="search" >
+      <input id="message" type="text" class="form-control" placeholder="type message...">
+      <button text="share a message" type="button" onclick="saveMessage()">Share</button>
     </form>
 
     <div class="flex-shrink-0">
@@ -39,8 +40,10 @@
     </div>
   </div>
 
+
+
 <script src="data.js"></script>
-<script src="ondocumentready.js"></script>
+<!--<script src="ondocumentready.js"></script>-->
 
 </body>
 </html>

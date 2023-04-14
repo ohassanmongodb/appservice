@@ -78,3 +78,23 @@ const search = async() =>{
     let m = movies.find();
     printjson(m);
 }
+
+
+const saveMessage = () =>{
+    var APP_ID = 'application-1-bzgbi';
+    var ATLAS_SERVICE = 'mongodb-atlas';
+    var app = new Realm.App({id: APP_ID});
+    app.logIn(Realm.Credentials.anonymous());
+    const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
+    const latitude = "";
+    const longitude = "";
+    navigator.geolocation.getCurrentPosition(position => {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude; 
+        var msg = $("#message").val();
+        var obj = {position:[latitude,longitude],text:msg};
+        mongodb.db("asd").collection("asd").insertOne(obj);
+    });
+    
+
+}
