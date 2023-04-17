@@ -4,16 +4,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <link rel="stylesheet" href="https://unpkg.com/papercss@1.9.1/dist/paper.min.css" />
-        <script src="/msg.js"> </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="msg.js"></script>
+        <script src="https://unpkg.com/realm-web/dist/bundle.iife.js"></script>
     </head>
     <body>
         <div class="card" style="width: 20rem;">
             <div class="card-header">Header</div>
               <div class="card-body">
+                <div class="row">
+                    <div class="col sm-8">
+                      <div class="form-group">
+                        <label for="paperInputs3">Block Level</label>
+                        <input class="input-block" type="text" id="paperInputs3">
+                      </div>
+                    </div>
+                  </div>
                 <h4 class="card-title">My awesome Paper card!</h4>
                 <h5 class="card-subtitle">Nice looking subtitle.</h5>
                 <p class="card-text">You can also place image on the bottom of the card.</p>
-                <button>Let me go here!</button>
+                <button onclick="msg()">Submit!</button>
               </div>
             <div class="card-footer">Footer</div>
           </div>
