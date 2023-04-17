@@ -23,9 +23,28 @@
                 <h4 class="card-title">My awesome Paper card!</h4>
                 <h5 class="card-subtitle">Nice looking subtitle.</h5>
                 <p class="card-text">You can also place image on the bottom of the card.</p>
-                <button onclick="msg()">Submit!</button>
-              </div>
+                
+                
+                <div class="row flex-spaces child-borders">
+                    <label id="msg" class="paper-btn margin" for="modal-1" onclick="msg()">Submit!</label>
+                  </div>
+                  <input class="modal-state" id="modal-1" type="checkbox">
+                  <div class="modal">
+                    <label class="modal-bg" for="modal-1"></label>
+                    <div class="modal-body">
+                      <label class="btn-close" for="modal-1">X</label>
+                      <h4 class="modal-title">Eddaje!</h4>
+                      <h5 class="modal-subtitle">wow!</h5>
+                      <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+                      <label for="modal-1">message submitted!</label>
+                    </div>
+                  </div>
+
+
+            </div>
             <div class="card-footer">Footer</div>
           </div>
+          
+          
     </body>
 </html>

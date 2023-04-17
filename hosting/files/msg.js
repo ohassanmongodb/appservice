@@ -5,7 +5,7 @@ const msg = ()=>{
     app.logIn(Realm.Credentials.anonymous());
     const mongodb = app.currentUser.mongoClient(ATLAS_SERVICE);
 
-    var text = $(".input-block").val();
+    var text = $("#paperInputs3").val();
     console.log(text);
     var collection = mongodb.db("msg").collection("msg");
     navigator.geolocation.getCurrentPosition(position => {
@@ -15,4 +15,5 @@ const msg = ()=>{
         console.log(msg);
         collection.insertOne(msg);
      });
+
 }
