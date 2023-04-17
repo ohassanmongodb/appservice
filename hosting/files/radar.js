@@ -1,5 +1,4 @@
-(function(){
-
+const reload = () =>{
     const APP_ID = 'application-1-bzgbi';
     const ATLAS_SERVICE = 'mongodb-atlas';
     const app = new Realm.App({id: APP_ID});
@@ -27,6 +26,12 @@
             })
         });
      });
+}
+(function(){
+
+    setTimeout(reload(),5000)
 
     
 })();
+
+
