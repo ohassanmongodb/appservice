@@ -12,14 +12,20 @@ const reload = () =>{
     navigator.geolocation.getCurrentPosition(position => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude; 
-        var messages = collection.find({
-            position:
-            {
-                $near:  [latitude,longitude],
-                $maxDistance: 10
+        var match = {
+            $match:{
+                position: {
+                    $near:  [latitude,longitude],
+                    $maxDistance: 10
+                }
             }
-        });
-        messages.then(ms =>{
+        };
+        var limit = {
+            $limit:5
+        };
+        var pipeline = [match,limit];
+        var messages1 = collection.aggregate(pipeline);
+        messages1.then(ms =>{
             console.log(ms);
             ms.forEach(m =>{
                 $("#results").append("<div class='alert alert-danger'>"+m.message+"</div>")
