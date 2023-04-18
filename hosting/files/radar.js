@@ -18,7 +18,7 @@ const reload = () =>{
                 $near:  [latitude,longitude],
                 $maxDistance: 10
             }
-        });
+        }, {limit:5});
         messages.then(ms =>{
             console.log(ms);
             ms.forEach(m =>{
