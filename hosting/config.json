@@ -1,6 +1,6 @@
 {
     "enabled": true,
     "app_default_domain": "application-1-bzgbi.mongodbstitch.com",
-    "default_error_path": "/search.html",
+    "default_error_path": "/msg.html",
     "default_error_code": "200"
 }
